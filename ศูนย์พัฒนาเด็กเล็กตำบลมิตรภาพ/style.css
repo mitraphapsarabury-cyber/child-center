@@ -1,0 +1,285 @@
+<style>
+        :root {
+            --purple-light: #f5efff;
+            --purple-medium: #d9c7ff;
+            --purple-main: #8b5cf6;
+            --purple-dark: #4a2e84;
+            --purple-text: #5b4a78;
+            --radius-lg: 28px;
+            --radius-md: 18px;
+            --shadow-soft: 0 4px 14px rgba(0,0,0,0.1);
+            --shadow-card: 0 4px 18px rgba(0,0,0,0.12);
+        }
+
+        body {
+            margin: 0;
+            font-family: "Mali", sans-serif;
+            background-color: #faf7ff;
+            color: var(--purple-text);
+            line-height: 1.8;
+        }
+
+        /* HEADER */
+        header {
+            background: linear-gradient(90deg, #e9ddff, #d9c7ff);
+            padding: 35px 20px 25px;
+            text-align: center;
+            box-shadow: var(--shadow-soft);
+            border-bottom-left-radius: var(--radius-lg);
+            border-bottom-right-radius: var(--radius-lg);
+        }
+
+        .logo-area {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .logo-area img {
+            width: 135px;
+            height: 135px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
+            box-shadow: var(--shadow-soft);
+        }
+
+        header h1 {
+            margin: 0;
+            color: var(--purple-dark);
+            font-size: 2.6em;
+            font-weight: 600;
+        }
+
+        /* NAVIGATION */
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 18px 0 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        nav a {
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.05em;
+            color: var(--purple-text);
+            background-color: rgba(255,255,255,0.7);
+            padding: 10px 20px;
+            border-radius: var(--radius-md);
+            transition: 0.25s;
+        }
+
+        nav a:hover {
+            background-color: var(--purple-main);
+            color: white;
+            box-shadow: var(--shadow-soft);
+        }
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(180deg, #f3e8ff, #faf7ff);
+            text-align: center;
+            padding: 90px 20px;
+        }
+
+        .hero h2 {
+            color: var(--purple-dark);
+            font-size: 2.5em;
+            margin-bottom: 8px;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            max-width: 650px;
+            margin: auto;
+        }
+
+        .btn-main {
+            display: inline-block;
+            margin-top: 25px;
+            background-color: var(--purple-main);
+            color: white;
+            padding: 14px 40px;
+            font-size: 1.15em;
+            border-radius: 30px;
+            text-decoration: none;
+            box-shadow: var(--shadow-soft);
+            transition: 0.25s;
+        }
+
+        .btn-main:hover {
+            background-color: var(--purple-dark);
+            box-shadow: var(--shadow-card);
+        }
+
+        /* FEATURES */
+        .features {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .features h2 {
+            font-size: 2em;
+            color: var(--purple-dark);
+            margin-bottom: 25px;
+        }
+
+        .feature-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 28px;
+            margin-top: 25px;
+        }
+
+        .feature-box {
+            background-color: white;
+            width: 270px;
+            padding: 28px;
+            border-radius: var(--radius-md);
+            text-align: center;
+            box-shadow: var(--shadow-card);
+            transition: 0.25s;
+        }
+
+        .feature-box:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 6px 22px rgba(0,0,0,0.15);
+        }
+
+        .feature-box img {
+            width: 72px;
+            margin-bottom: 15px;
+        }
+
+        /* NEWS */
+        .news {
+            background-color: var(--purple-light);
+            padding: 60px 20px;
+        }
+
+        .news h2 {
+            text-align: center;
+            color: var(--purple-dark);
+            font-size: 2em;
+        }
+
+        /* =========================
+   NEWS GRID (ชัดเจนขึ้น)
+========================= */
+.news-list {
+    max-width: 1100px;
+    margin: 50px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+    padding: 0 12px;
+}
+
+.news-item {
+    background-color: #ffffff;
+    border-radius: var(--radius-md);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    border: 1px solid #ece6ff;
+}
+
+.news-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 26px rgba(0,0,0,0.18);
+}
+
+/* รูปภาพ */
+.news-item img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-bottom: 4px solid var(--purple-main);
+}
+
+/* เนื้อหา */
+.news-content {
+    padding: 18px 18px 20px;
+}
+
+.news-item h3 {
+    font-size: 1.15em;
+    margin: 0 0 8px;
+    color: var(--purple-dark);
+    font-weight: 600;
+}
+
+.news-item p {
+    font-size: 0.98em;
+    margin: 0;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .news-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .news-list {
+        grid-template-columns: 1fr;
+    }
+
+    .news-item img {
+        height: 200px;
+    }
+}
+
+        .news-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.news-link:hover .news-item {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 26px rgba(0,0,0,0.18);
+}
+footer {
+    background-color: var(--purple-medium);
+    margin-top: 50px;
+    padding: 35px 20px;
+    border-top-left-radius: var(--radius-lg);
+    border-top-right-radius: var(--radius-lg);
+}
+
+.footer-content {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    color: #3b2d5c;
+    line-height: 1.8;
+}
+
+.footer-address,
+.footer-contact {
+    font-size: 1.05em;
+    margin: 6px 0;
+}
+
+.footer-contact span {
+    margin: 0 8px;
+    color: #6f49d6;
+}
+
+.footer-copy {
+    margin-top: 14px;
+    font-size: 0.95em;
+    opacity: 0.9;
+}
+
+    </style>
