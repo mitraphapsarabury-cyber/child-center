@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>กิจกรรม | ศูนย์พัฒนาเด็กเล็กตำบลมิตรภาพ จังหวัดสระบุรี</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Mali:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --purple-bg:#faf7ff;
+      --purple-light:#efe6ff;
+      --purple-mid:#d9c7ff;
+      --purple-main:#8b5cf6;
+      --purple-dark:#4a2e84;
+      --muted-text:#5b4a78;
+      --card-bg:#ffffff;
+      --radius-lg:28px;
+      --radius-md:18px;
+      --shadow-soft:0 4px 14px rgba(0,0,0,.08);
+      --shadow-elev:0 10px 30px rgba(112,74,170,.18);
+      --max-width:1100px;
+    }
+
+    body{
+      margin:0;
+      font-family:"Mali",cursive;
+      background:var(--purple-bg);
+      color:var(--muted-text);
+      line-height:1.8;
+    }
+
+    header{
+      background: linear-gradient(135deg,var(--purple-mid),#b59bff);
+      padding:40px 20px 30px;
+      text-align:center;
+      border-bottom-left-radius:var(--radius-lg);
+      border-bottom-right-radius:var(--radius-lg);
+      box-shadow:var(--shadow-soft);
+    }
+
+    /* ===== โลโก้ (ปรับให้สวยขึ้น) ===== */
+    .logo-wrap{
+      width:140px;
+      height:140px;
+      margin:0 auto 18px;
+      border-radius:50%;
+      background:linear-gradient(145deg,#ffffff,#e6ddff);
+      padding:8px;
+      box-shadow:
+        0 8px 24px rgba(112,74,170,.35),
+        inset 0 0 0 3px rgba(255,255,255,.6);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      transition:.35s ease;
+    }
+
+    .logo-wrap img{
+      width:100%;
+      height:100%;
+      border-radius:50%;
+      object-fit:cover;
+      background:#fff;
+    }
+
+    .logo-wrap:hover{
+      transform:translateY(-6px) scale(1.03);
+      box-shadow:0 14px 36px rgba(112,74,170,.45);
+    }
+    /* ===== จบส่วนโลโก้ ===== */
+
+    header h1{
+      margin:0;
+      font-size:1.9rem;
+      color:var(--purple-dark);
+      font-weight:700;
+    }
+
+    nav ul{
+      list-style:none;
+      padding:0;
+      margin:22px 0 0;
+      display:flex;
+      justify-content:center;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+
+    nav a{
+      text-decoration:none;
+      padding:10px 18px;
+      border-radius:999px;
+      background:rgba(255,255,255,.25);
+      color:#fff;
+      font-weight:600;
+      transition:.25s;
+    }
+
+    nav a:hover{
+      background:var(--purple-main);
+      transform:translateY(-3px);
+      box-shadow:var(--shadow-elev);
+    }
+
+    .hero{
+      max-width:var(--max-width);
+      margin:50px auto 30px;
+      padding:60px 22px;
+      text-align:center;
+      background:linear-gradient(180deg,var(--purple-light),var(--purple-bg));
+      border-radius:var(--radius-md);
+      box-shadow:var(--shadow-soft);
+    }
+
+    .hero h2{
+      margin:0 0 14px;
+      font-size:2.4rem;
+      color:var(--purple-dark);
+      font-weight:700;
+    }
+
+    .hero p{
+      max-width:760px;
+      margin:0 auto;
+      font-size:1.05rem;
+    }
+
+    .activities{
+      max-width:var(--max-width);
+      margin:0 auto;
+      padding:10px 18px 80px;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:34px;
+    }
+
+    .activity{
+      background:var(--card-bg);
+      border-radius:var(--radius-lg);
+      overflow:hidden;
+      box-shadow:var(--shadow-elev);
+      transition:.3s;
+    }
+
+    .activity:hover{
+      transform:translateY(-8px);
+    }
+
+    .activity img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+      transition:.5s;
+    }
+
+    .activity:hover img{
+      transform:scale(1.1);
+    }
+
+    .info{
+      padding:26px;
+    }
+
+    .info h3{
+      margin:0 0 8px;
+      color:var(--purple-dark);
+      font-weight:700;
+      font-size:1.25rem;
+    }
+
+    .info p{
+      margin:0 0 14px;
+      font-size:.95rem;
+    }
+
+    iframe{
+      width:100%;
+      height:260px;
+      border:0;
+      border-radius:16px;
+      background:#fff;
+    }
+
+    .btn-drive{
+      display:inline-block;
+      margin-top:14px;
+      padding:10px 18px;
+      background:var(--purple-main);
+      color:#fff;
+      border-radius:999px;
+      text-decoration:none;
+      font-weight:600;
+      transition:.25s;
+    }
+
+    .btn-drive:hover{
+      background:#6d28d9;
+      transform:translateY(-2px);
+      box-shadow:var(--shadow-soft);
+    }
+
+    footer{
+      background:var(--purple-mid);
+      text-align:center;
+      padding:36px 16px;
+      border-top-left-radius:var(--radius-lg);
+      border-top-right-radius:var(--radius-lg);
+      color:var(--purple-dark);
+    }
+
+    footer p{margin:6px 0}
+
+    @media(max-width:600px){
+      header h1{font-size:1.4rem}
+      .hero h2{font-size:1.9rem}
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo-wrap">
+    <img src="image/logo00.png" alt="โลโก้ศูนย์">
+  </div>
+
+  <h1>ศูนย์พัฒนาเด็กเล็กตำบลมิตรภาพ จังหวัดสระบุรี</h1>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">หน้าแรก</a></li>
+      <li><a href="about.html">เกี่ยวกับเรา</a></li>
+      <li><a href="program.html">หลักสูตร</a></li>
+      <li><a href="activities.html">กิจกรรม</a></li>
+      <li><a href="highlight.html">จุดเด่น</a></li>
+      <li><a href="enroll.html">สมัครเรียน</a></li>
+      <li><a href="contact.html">ติดต่อเรา</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>📸 อัลบั้มกิจกรรมของเด็ก ๆ</h2>
+  <p>รวมภาพกิจกรรมการเรียนรู้ การเล่น และประสบการณ์สำคัญของเด็ก ๆ เพื่อพัฒนาทักษะทั้งร่างกาย อารมณ์ สังคม และสติปัญญา</p>
+</section>
+
+<section class="activities">
+
+  <div class="activity">
+    <img src="01/12.jpg" alt="กิจกรรมศิลปะ">
+    <div class="info">
+      <h3>🎨 กิจกรรมศิลปะสร้างสรรค์</h3>
+      <p>เสริมจินตนาการและกล้ามเนื้อมัดเล็ก ผ่านการวาด ระบายสี และงานประดิษฐ์</p>
+      <iframe src="https://drive.google.com/embeddedfolderview?id=1AzVr3wCP10qAZsr_iAvdrmr-_vb9bq80#grid"></iframe>
+      <a href="https://drive.google.com/drive/folders/1AzVr3wCP10qAZsr_iAvdrmr-_vb9bq80" target="_blank" class="btn-drive">📂 ดูอัลบั้มทั้งหมด</a>
+    </div>
+  </div>
+
+  <div class="activity">
+    <img src="03/06.jpg" alt="กิจกรรมกลางแจ้ง">
+    <div class="info">
+      <h3>⚽ กิจกรรมกลางแจ้ง</h3>
+      <p>พัฒนากล้ามเนื้อ ความแข็งแรง และการทำงานร่วมกันของเด็ก ๆ</p>
+      <iframe src="https://drive.google.com/embeddedfolderview?id=16rA7gpF-ozqJDwE_HDM9eGmFyQ5Xt0KC#grid"></iframe>
+      <a href="https://drive.google.com/drive/folders/16rA7gpF-ozqJDwE_HDM9eGmFyQ5Xt0KC" target="_blank" class="btn-drive">📂 ดูอัลบั้มทั้งหมด</a>
+    </div>
+  </div>
+
+  <div class="activity">
+    <img src="02/0015.jpg" alt="กิจกรรมวันสำคัญ">
+    <div class="info">
+      <h3>🎉 กิจกรรมวันสำคัญ</h3>
+      <p>กิจกรรมส่งเสริมคุณธรรม จริยธรรม ประเพณี และวัฒนธรรมไทย</p>
+      <iframe src="https://drive.google.com/embeddedfolderview?id=17MDZlgIn32EX59iSM96duscmQYQ0UGh-#grid"></iframe>
+      <a href="https://drive.google.com/drive/folders/17MDZlgIn32EX59iSM96duscmQYQ0UGh-" target="_blank" class="btn-drive">📂 ดูอัลบั้มทั้งหมด</a>
+    </div>
+  </div>
+
+</section>
+
+<footer>
+  <p>📍 139 หมู่ 8 ตำบลมิตรภาพ อำเภอมวกเหล็ก จังหวัดสระบุรี</p>
+  <p>☎️ 036-730-769 | Facebook: ศูนย์พัฒนาเด็กเล็กตำบลมิตรภาพ</p>
+  <p>© 2025 ศูนย์พัฒนาเด็กเล็กตำบลมิตรภาพ</p>
+</footer>
+
+</body>
+</html>
